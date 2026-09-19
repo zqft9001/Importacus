@@ -70,7 +70,7 @@ if(isset($gclean["JSON"])){
 	}
 
 	//archidekt
-	if(preg_match("/.*archidekt.com\/decks\/([0-9]+)\/.*/", $url, $substrs)){
+	if(preg_match("/.*archidekt.com\/decks\/([0-9]+)\/*.*/", $url, $substrs)){
 		$url = "https://archidekt.com/api/decks/".$substrs[1]."/";
 	}
 
