@@ -356,9 +356,9 @@ function getimagebyuuid($uuid, $special = array()){
 	global $scryfallcache;
 
 	if (isset($special["back"])){
-		return $scryfallcache.'/normal/back/'.substr($card["scryfallId"],0,1).'/'.substr($card["scryfallId"],1,1).'/'.$card["scryfallId"].'.jpg';
+		return $scryfallcache.'/grid/back/'.substr($card["scryfallId"],0,1).'/'.substr($card["scryfallId"],1,1).'/'.$card["scryfallId"].'.webp';
 	}
-	return $scryfallcache.'/normal/front/'.substr($card["scryfallId"],0,1).'/'.substr($card["scryfallId"],1,1).'/'.$card["scryfallId"].'.jpg';
+	return $scryfallcache.'/grid/front/'.substr($card["scryfallId"],0,1).'/'.substr($card["scryfallId"],1,1).'/'.$card["scryfallId"].'.webp';
 }
 
 //Generates a rarity based on the length of the string passed.
@@ -416,7 +416,7 @@ function printnice($card, $options){
 		echo '<a href="https://scryfall.com/card/'.strtolower($card["setCode"]).'/'.$card["number"].'">';
 
 		if($options["images"] == "yes"){
-			echo "<img src=\"https://cards.scryfall.io/normal/front/".substr($card["scryfallId"],0,1).'/'.substr($card["scryfallId"],1,1).'/'.$card["scryfallId"].'.jpg"  style=\'height:33%;\'>';
+			echo "<img src=\"https://cards.scryfall.io/grid/front/".substr($card["scryfallId"],0,1).'/'.substr($card["scryfallId"],1,1).'/'.$card["scryfallId"].'.webp"  style=\'height:33%;\'>';
 			if($fcount % 8 == 0){
 				echo "\n";
 			}
@@ -437,7 +437,7 @@ function printnice($card, $options){
 
 	if($options["images"] == "yes"){
 		echo '<a href="https://scryfall.com/card/'.strtolower($card["setCode"]).'/'.$card["number"].'">';
-		echo "<img src=\"https://cards.scryfall.io/normal/front/".substr($card["scryfallId"],0,1).'/'.substr($card["scryfallId"],1,1).'/'.$card["scryfallId"].'.jpg"  style=\'height:33%;\'>';
+		echo "<img src=\"https://cards.scryfall.io/grid/front/".substr($card["scryfallId"],0,1).'/'.substr($card["scryfallId"],1,1).'/'.$card["scryfallId"].'.webp"  style=\'height:33%;\'>';
 		echo '</a>';
 		if($fcount % 5 == 0){
 			echo "<br>";
